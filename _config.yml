@@ -1,3 +1,3 @@
 markdow: redcarpet
-baseurl: /SupahJay.github.io
+baseurl: /
 exclude:['README.md', 'index2.html']
