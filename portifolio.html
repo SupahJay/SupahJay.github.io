@@ -1,7 +1,10 @@
----
-layout: portifolio
----
-
-        {% for x in site.posts %}
-        <a href="#" class="post"><img><div>{{x.title}}</div></a>
-        {% endfor %}
+--- layout: portifolio --- 
+{% for x in site.posts %}
+<a href="{{x.link}}" class="post">
+<img>
+    <div>
+        <h3>{{x.title}}</h3>
+        <p>{{x.meta}}</p>
+    </div>
+</a> 
+{% endfor %}
