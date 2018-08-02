@@ -1,2 +1,2 @@
 markdow: redcarpet
-exclude: ['README.md', 'index2.html', 'style.csss']
+exclude: ['README.md', 'index2.html']
