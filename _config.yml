@@ -1,3 +1,2 @@
 markdow: redcarpet
-baseurl: /
 exclude: ['README.md', 'index2.html', 'style.csss']
