@@ -11,10 +11,15 @@
     <a class="chip" href="{{site.baseurl}}/portifolio.html" style="position:fixed;left:10;top:calc(.7vw + 10px + 8%)">Back</a>
     <article id="post">
         <div id="heroImg"></div>
-        <p>Page name:<br>{{page}}</p>
-        <p>Page data:<br>{{page.data-test}}</p>
-        <br>
+        <p>
+            <!--CONTENTS STARTS HERE-->
+                {{page.meta}}
+            <!--CONTENT ENDS HERE-->
         {{content}}
+        </p>
+        <a class="CallAction" href="index.html">Live page</a>
+        <a href="index.html" class="live"><img></a>
+        
         <a class="chip linRight">Last</a>
         <a class="chip linLeft">Next</a> &nbsp;
     </article>
