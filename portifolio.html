@@ -3,7 +3,7 @@ layout: portifolio
 --- 
 {% increment counter %}
 {% for x in site.posts %}
-<a href="preview/{% if counter!=0 %}{{counter}}{% else %}{% increment counter %}{% endif %}" class="post">
+<a href="preview/{% if counter>1 %}{{counter}}{% endif %}" class="post">
 <img>
     <div>
         <h3>{{x.title}}</h3>
