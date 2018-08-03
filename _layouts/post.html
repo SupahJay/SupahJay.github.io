@@ -20,8 +20,21 @@
         <a href="index.html" class="live"><img></a>
         
         {% for x in page.data-test %}
-        <!--LOOP-->
-        <aside class="example {% cycle 'left', 'right' %}">
+        
+        {% capture thecycle %}{% cycle 'left', 'right' %}{% endcapture %}
+        
+    {% if thecycle == 'left' %}
+        <aside class="example {{thecycle}}">
+            <span></span>
+            <div>
+                <p>
+                    {{x}}
+                </p>
+            </div>
+        </aside>
+        {% endif %}
+    {% if thecycle == 'right' %}
+        <aside class="example {{thecycle}}">
             <div>
                 <p>
                     {{x}}
@@ -29,7 +42,8 @@
             </div>
             <span></span>
         </aside>
-<!--END LOOP-->
+    {% endif %}
+        
         {% endfor %}
         
         <a class="chip linRight">Last</a>
