@@ -3,7 +3,7 @@ layout: portifolio
 --- 
 
 {% for x in site.posts %}
-<a href="preview/{% if forLoop.index>1 %}{{forLoop.index}}{% endif %}" class="post">
+<a href="preview/{% if forloop.index>1 %}{{forloop.index}}{% endif %}" class="post">
 <img>
     <div>
         <h3>{{x.title}}</h3>
