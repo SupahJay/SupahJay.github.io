@@ -3,14 +3,14 @@ layout: post
 ---
         <p>
             <!--CONTENTS STARTS HERE-->
-            {{content}}
+                {{page.meta}}
             <!--CONTENT ENDS HERE-->
         </p>
         <a class="CallAction" href="index.html">Live page</a>
         <a href="index.html" class="live"><img></a>
         <!--LOOP STARTS HERE-->
-        {% for x in page.data-test %}
-<!--LOOP-->
+            {% for x in page.data-test %}
+        <!--LOOP-->
         <aside class="example {% cycle 'left', 'right' %}">
             <div>
                 <p>
