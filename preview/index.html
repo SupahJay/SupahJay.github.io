@@ -43,9 +43,15 @@
         {% endif %}
             </aside>
             {% endfor %}
-
-            <a class="chip linRight">Last</a>
-            <a class="chip linLeft">Next</a> &nbsp;
+            
+{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="chip linRight">Last</a>
+{% endif %}
+  <!--<span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>-->
+{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="chip linLeft">Next</a>
+{% endif %}
+             &nbsp;
         </article>
     </body>
     </html>
