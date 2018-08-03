@@ -1,2 +1,5 @@
 markdow: redcarpet
 exclude: ['README.md', 'index2.html']
+plugins: [jekyll-paginate]
+paginate: 1
+paginate_path: /porty/page:num/
