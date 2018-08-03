@@ -6,8 +6,9 @@ layout: post
         </p>
         <a class="CallAction" href="index.html">Live page</a>
         <a href="index.html" class="live"><img></a>
-        
+        <!--LOOP STARTS HERE-->
         {% for x in page.data-test %}
+<!--LOOP-->
         <aside class="example {% cycle 'left', 'right' %}">
             <div>
                 <p>
@@ -16,4 +17,5 @@ layout: post
             </div>
             <span></span>
         </aside>
+<!--END LOOP-->
         {% endfor %}
