@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
+    <title>relative title</title>
     <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body class="showCase">
@@ -11,23 +11,7 @@
     <a class="chip" href="portifolio.html" style="position:fixed;left:10;top:calc(.7vw + 10px + 8%)">Back</a>
     <article id="post">
         <div id="heroImg"></div>
-        <p>
-            {{content}}
-        </p>
-        <a class="CallAction" href="index.html">Live page</a>
-        <a href="index.html" class="live"><img></a>
-        
-        {% for x in page.data-test %}
-        <aside class="example {% cycle 'left', 'right' %}">
-            <div>
-                <p>
-                    {{x}}
-                </p>
-            </div>
-            <span></span>
-        </aside>
-        {% endfor %}
-        
+        {{content}}
         <a class="chip linRight">Last</a>
         <a class="chip linLeft">Next</a> &nbsp;
     </article>

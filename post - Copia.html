@@ -1,0 +1,19 @@
+---
+layout: post
+---
+        <p>
+            {{content}}
+        </p>
+        <a class="CallAction" href="index.html">Live page</a>
+        <a href="index.html" class="live"><img></a>
+        
+        {% for x in page.data-test %}
+        <aside class="example {% cycle 'left', 'right' %}">
+            <div>
+                <p>
+                    {{x}}
+                </p>
+            </div>
+            <span></span>
+        </aside>
+        {% endfor %}
