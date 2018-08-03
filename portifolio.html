@@ -1,7 +1,7 @@
 ---
 layout: portifolio
 --- 
-{% for x in paginator.posts %}
+{% for x in site.posts %}
 <a href="{{x.url}}" class="post">
 <img>
     <div>
@@ -9,5 +9,4 @@ layout: portifolio
         <p>{{x.meta}}</p>
     </div>
 </a> 
-{{paginator.next_page}}
 {% endfor %}
