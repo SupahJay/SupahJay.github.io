@@ -16,13 +16,12 @@
                 {{page.meta}}
             <!--CONTENT ENDS HERE-->
         </p>
-        <a class="CallAction" href="index.html">Live page</a>
-        <a href="index.html" class="live"><img></a>
+        <a class="CallAction" href="{{site.baseurl}}/index.html">Live page</a>
+        <a href="{{site.baseurl}}/index.html" class="live"><img></a>
         
         {% for x in page.data-test %}
         
         {% capture thecycle %}{% cycle 'left', 'right' %}{% endcapture %}
-        
         <aside class="example {{thecycle}}">
     {% if thecycle == 'left' %}
             <span></span>
@@ -40,7 +39,6 @@
             <span></span>
     {% endif %}
         </aside>
-        
         {% endfor %}
         
         <a class="chip linRight">Last</a>
