@@ -23,26 +23,23 @@
         
         {% capture thecycle %}{% cycle 'left', 'right' %}{% endcapture %}
         
+        <aside class="example {{thecycle}}">
     {% if thecycle == 'left' %}
-        <aside class="example {{thecycle}}">
             <span></span>
             <div>
                 <p>
                     {{x}}
                 </p>
             </div>
-        </aside>
-        {% endif %}
-    {% if thecycle == 'right' %}
-        <aside class="example {{thecycle}}">
+    {% else %}
             <div>
                 <p>
                     {{x}}
                 </p>
             </div>
             <span></span>
-        </aside>
     {% endif %}
+        </aside>
         
         {% endfor %}
         
