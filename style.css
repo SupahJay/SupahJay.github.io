@@ -62,7 +62,7 @@ header a{color:var(--MainColor);font-size:calc(1vw + 20px)/*3.01rem*/;font-weigh
 
 
 /*Article*/
-body.showcase{padding:100px 0 0 0;}
+body.showcase{padding:100px 0 0 0; position: relative}
 #post{margin-top:10%;background:#fdfdfd}
 #post p{max-width:85%;margin:30px auto;}
 #heroImg{height:450;background:#cecece;width:60%;max-width: 900;min-width: 600;margin:auto;transform: translateY(-10vh);margin-bottom:-10vh}

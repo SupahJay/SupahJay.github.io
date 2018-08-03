@@ -15,10 +15,22 @@
             <!--CONTENTS STARTS HERE-->
                 {{page.meta}}
             <!--CONTENT ENDS HERE-->
-        {{content}}
         </p>
         <a class="CallAction" href="index.html">Live page</a>
         <a href="index.html" class="live"><img></a>
+        
+        {% for x in page.data-test %}
+        <!--LOOP-->
+        <aside class="example {% cycle 'left', 'right' %}">
+            <div>
+                <p>
+                    {{x}}
+                </p>
+            </div>
+            <span></span>
+        </aside>
+<!--END LOOP-->
+        {% endfor %}
         
         <a class="chip linRight">Last</a>
         <a class="chip linLeft">Next</a> &nbsp;
