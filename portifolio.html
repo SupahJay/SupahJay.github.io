@@ -1,6 +1,12 @@
 ---
 layout: portifolio
 --- 
+{% assign counter = 1 %}
+ {% for item in site.posts %}
+ {% assign counter=counter | plus:1 %}
+{% endfor %}
+<h1>{{ counter }}</h1>
+
 {% for x in site.posts %}
 <a href="{{x.url}}" class="post">
 <img>
