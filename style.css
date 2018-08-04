@@ -24,9 +24,9 @@ a{text-decoration: none;color:#333}
 
 
 /*Main page*/
-.intro h1{color:var(--MainColor);margin:calc(5% + 100px) 0 30;font-size: 3rem}
-.intro p{font-size:1.2rem;margin:50 auto;max-width: 800;}
-.intro a, .chip{background:var(--SecundaryColor);display:inline-block;width:150;height:37px;border-radius:50px;padding-top:8;margin:9 20;color:#222}
+h1.intro {color:var(--MainColor);margin:calc(5% + 100px) 0 30;font-size: 3rem}
+p.intro {font-size:1.2rem;margin:50 auto;max-width: 800;}
+.chip{background:var(--SecundaryColor);display:inline-block;width:150;height:37px;border-radius:50px;padding-top:8;margin:9 20;color:#222}
 
 
 
