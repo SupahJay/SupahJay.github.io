@@ -1,7 +1,7 @@
 <html>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{{post.title}}</title>
+            <title>{{page.title}}</title>
             <link href="{{site.baseurl}}/style.css" type="text/css" rel="stylesheet">
         </head>
 
@@ -12,10 +12,10 @@
                 <article id="post">
                     <div id="heroImg"></div>
                     <p>{{content}}</p>
-                    <a class="CallAction" href="{{post.link}}">Live page</a>
-                    <a href="{{post.link}}" class="live"><img></a>
+                    <a class="CallAction" href="{{page.link}}">Live page</a>
+                    <a href="{{page.link}}" class="live"><img></a>
                     <!--   TURNING DATA INTO SIDEPOSTS   -->
-                    {% for data in post.sample-div %}
+                    {% for data in page.sample-div %}
                         {% capture side %}{% cycle 'left', 'right' %}{% endcapture %}
                         <aside class="example {{side}}">
                             {% if side == 'left' %}
@@ -29,12 +29,12 @@
                     {% endfor %}
 
                     <!--    AUTO GENERETED PAGE MOVE   -->
-                    {% if post.previous %}
-                        <a href="{{post.previous}}" class="chip linRight">Last</a>
+                    {% if page.previous %}
+                        <a href="{{page.previous.url}}" class="chip linRight">Last</a>
                     {% endif %}
-                    <!--<span class="page_number ">Page: {{ post.page }} of {{ post.total_pages }}</span>-->
-                    {% if post.next %}
-                        <a href="{{post.next}}" class="chip linLeft">Next</a>
+                    <!--<span class="page_number ">Page: {{ page.page }} of {{ page.total_pages }}</span>-->
+                    {% if page.next %}
+                        <a href="{{page.next.url}}" class="chip linLeft">Next</a>
                     {% endif %}&nbsp;
                 </article><!--where data goes-->
             </div><!--fake one-->
