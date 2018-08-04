@@ -26,10 +26,10 @@
             </ul>
         </section>
         {{content}}
+    </div>
         <script>
             window.onload = () => {scrollBy(0, localStorage.getItem("scrollPos"))}
             window.onscroll = () => {localStorage.setItem("scrollPos", scrollY)}
         </script>
-    </div>
 </body>
 </html>
