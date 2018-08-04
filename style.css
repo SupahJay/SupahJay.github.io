@@ -2,8 +2,10 @@
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat|Coda|Rammetto+One');*/
 @import url('https://fonts.googleapis.com/css?family=Coda|Montserrat');
 /*@import url('https://fonts.googleapis.com/css?family=Passion+One:400,700,900');*/
+
+/*-/-/-/-GENERAL RULES-\-\-\-*/
 *{box-sizing:border-box;font-family: montserrat}
-body{margin:0;text-align: center;width: auto}
+body{margin:0;text-align: center;width: auto;position: relative}
 :root{
     --MainColor:#7DD0FF;
     --SecundaryColor:#F1F1F1;
@@ -62,12 +64,12 @@ header a{color:var(--MainColor);font-size:calc(1vw + 20px)/*3.01rem*/;font-weigh
 
 
 /*Article*/
-body.showcase{padding:100px 0 0 0; position: relative}
-#post{margin-top:10%;background:#fdfdfd}
+.chip.back{position:fixed;left:10;top:calc(.7vw + 10px + 8%)}
+#post{margin-top:calc( 10% + 100px );background:#fdfdfd}
 #post p{max-width:85%;margin:30px auto;}
 #heroImg{height:450;background:#cecece;width:60%;max-width: 900;min-width: 600;margin:auto;transform: translateY(-10vh);margin-bottom:-10vh}
 .example{display:flex;flex-flow: wrap;align-items: center;max-width: 80%;margin:50 auto}
-aside span{width:500px;background:#55c1b0;Height:350;margin:auto}
+aside span, aside img{width:500px;background:#55c1b0;Height:350;margin:auto}
 aside div{width: 350;flex-grow: 2;}
 .left div{padding-left:20;}
 .right div{padding-right: 20;}

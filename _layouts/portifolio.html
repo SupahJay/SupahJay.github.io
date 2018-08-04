@@ -8,37 +8,28 @@
 
 <body style="background:#fdfdfd;padding-top:90px" id="barba-wrapper">
     <div class="barba-container">
-    <header><a href="https://supahjay.github.io">Moabe</a></header>
-    <button id="menu" onclick="tags.style.display=='block'? tags.style.display='none':tags.style.display=tags.style.display='block';this.classList.toggle('close')"></button>
-    <section id="tags">
-        <p>Styles</p>
-        <ul>
-            <li>Minimalistc</li>
-            <li>Modern</li>
-            <li>Old School</li>
-        </ul>
-        <p>Types</p>
-        <ul>
-            <li>Websites</li>
-            <li>Posters</li>
-            <li>Icons</li>
-            <li></li>
-        </ul>
-    </section>
-    {{content}}
-    <script>
-        window.onload = () => {
-            scrollBy(0, localStorage.getItem("scrollPos"))
-        }
-        window.onscroll = () => {
-            localStorage.setItem("scrollPos", scrollY)
-        }
-
-    </script>
+        <header><a href="https://supahjay.github.io">Moabe</a></header>
+        <button id="menu" onclick="tags.style.display=='block'? tags.style.display='none':tags.style.display=tags.style.display='block';this.classList.toggle('close')"></button>
+        <section id="tags">
+            <p>Styles</p>
+            <ul>
+                <li>Minimalistc</li>
+                <li>Modern</li>
+                <li>Old School</li>
+            </ul>
+            <p>Types</p>
+            <ul>
+                <li>Websites</li>
+                <li>Posters</li>
+                <li>Icons</li>
+                <li></li>
+            </ul>
+        </section>
+        {{content}}
+        <script>
+            window.onload = () => {scrollBy(0, localStorage.getItem("scrollPos"))}
+            window.onscroll = () => {localStorage.setItem("scrollPos", scrollY)}
+        </script>
     </div>
 </body>
-
-
-
-
 </html>
