@@ -9,7 +9,7 @@
         <!--   TURNING DATA INTO SIDEPOSTS   -->
         {% for data in page.sample-div %}
             {% capture side %}{% cycle 'Left', 'Right' %}{% endcapture %}
-            <aside class="example {{side}} wow fadeIn{{side}}">
+            <aside class="example {{side}} wow fadeIn{% if side == 'Left' %}Right{% else %}Left{% endif %}">
                 {% if side == 'Left' %}
                 <span></span>
                 <div><p>{{data}}</p></div>
