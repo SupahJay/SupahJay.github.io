@@ -10,7 +10,7 @@
         {% for data in page.sample-div %}
             {% capture side %}{% cycle 'Left', 'Right' %}{% endcapture %}
             <aside class="example {{side}} wow fadeIn{{side}}">
-                {% if side == 'left' %}
+                {% if side == 'Left' %}
                 <span></span>
                 <div><p>{{data}}</p></div>
                 {% else %}
