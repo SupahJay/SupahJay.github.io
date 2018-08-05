@@ -10,20 +10,20 @@
             <header><a href="{{site.baseurl}}/index.html">Moabe</a></header>
             <a class="chip back" href="{{site.baseurl}}/portifolio.html">Back</a>
             <article id="post">
-                <div id="heroImg"></div>
-                <p>{{content}}</p>
-                <a class="CallAction" href="{{page.link}}">Live page</a>
-                <a href="{{page.link}}" class="live"><img></a>
+                <div id="heroImg" class="wow"></div>
+                <p class="wow">{{content}}</p>
+                <a class="CallAction" href="{{page.link}}" class="wow">Live page</a>
+                <a href="{{page.link}}" class="live" class="wow"><img></a>
                 <!--   TURNING DATA INTO SIDEPOSTS   -->
                 {% for data in page.sample-div %}
                     {% capture side %}{% cycle 'left', 'right' %}{% endcapture %}
                     <aside class="example {{side}}">
                         {% if side == 'left' %}
-                        <span></span>
-                        <div><p>{{data}}</p></div>
+                        <span class="wow"></span>
+                        <div><p class="wow">{{data}}</p></div>
                         {% else %}
-                        <div><p>{{data}}</p></div>
-                        <span></span>
+                        <div><p class="wow">{{data}}</p></div>
+                        <span class="wow"></span>
                         {% endif %}
                     </aside>
                 {% endfor %}
