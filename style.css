@@ -71,8 +71,8 @@ header a{color:var(--MainColor);font-size:calc(1vw + 20px)/*3.01rem*/;font-weigh
 .example{display:flex;flex-flow: wrap;align-items: center;max-width: 80%;margin:50 auto}
 aside span, aside img{width:500px;background:#55c1b0;Height:350;margin:auto}
 aside div{width: 350;flex-grow: 2;}
-.left div{padding-left:20;}
-.right div{padding-right: 20;}
+.Left div{padding-left:20;}
+.Right div{padding-right: 20;}
 .chip.linRight, .chip.linLeft {position:absolute;margin-bottom:2%;box-shadow:1px 1px 6px rgba(0, 0, 0, 0.2)}
 .linRight{left:7%;}
 .linLeft{right:7%;}
@@ -100,7 +100,7 @@ aside div{width: 350;flex-grow: 2;}
     #tags p{}
 }
 @media (max-width:1066px){
-    .right div, .left div{padding:0}
+    .Right div, .Left div{padding:0}
 }
 
 @media (max-width:630px){

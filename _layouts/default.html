@@ -1,14 +1,6 @@
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script src="{{site.baseurl}}/js.js"></script>
-    <link href="https://supahjay.github.io/style.css" type="text/css" rel="stylesheet">
-</head>
-<body stle="padding:10" >
-        {% include code-up.html %}
-            {{content}}
-            <section><a  class="chip">Contact</a><a  class="chip">About Me</a><a  class="chip" href="{{site.basseurl}}/portifolio.html">Portifolio</a></section>
-        {% include code-bottom.html %}
-</body>
-</html>
+{% include code-up.html %}
+    <!--BODY HAD PADDING 10-->
+    {{content}}
+    <section><a  class="chip">Contact</a><a  class="chip">About Me</a><a  class="chip" href="{{site.basseurl}}/portifolio.html">Portifolio</a></section>
+{% include code-bottom.html %}
+
