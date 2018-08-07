@@ -8,7 +8,7 @@ var transEffect = Barba.BaseTransition.extend({
 			//things we'll add to the Barba obj
 				//Start key
                 start: function(){
-                  this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
+                  this.newContainerLoading.then(val => this.fadeInNewcontent(this.newContainer));
                 },
 				//Fade In new content key Home Made
                 fadeInNewcontent: function(nc) {
