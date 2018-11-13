@@ -4,7 +4,7 @@ Right now I'm using it to test jekill
 
 
 
-#Jekyll data:
+## Jekyll data:
 - Loop over posts:
 `Looping over post's object looks just like JS and somewhat php`
 Just like in Js the data inside the object can be acessed by ObjectName.Keyname.
