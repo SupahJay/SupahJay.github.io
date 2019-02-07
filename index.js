@@ -1,5 +1,5 @@
-//Barba.Pjax.start();
-//new WOW().init();
+Barba.Pjax.start();
+new WOW().init();
 
 //! First Part: the easing config
 const ease = {
