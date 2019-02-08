@@ -134,28 +134,18 @@ var overlay = new ShapeOverlays(elmOverlay);
 Barba.Pjax.getTransition = function () {
   return Barba.BaseTransition.extend({
     start: function () {
-      //pre load shit here .is-opened{z-index: 110}
-      elmOverlay.style.zIndex=110
-      document.body.style.overflow="hidden"
+      //pre load shit here
+      elmOverlay.style.zIndex=110;
+      document.body.style.overflow="hidden";
       overlay.toggle();
-      var time =  Date.now()
       var _this = this;
       //after load shit here
       this.newContainerLoading.then( () => {
-        overlay.pro.then((x,y)=>{ overlay.toggle();
+        overlay.pro.then( (x,y) => {
+          overlay.toggle();
           _this.done();
-          overlay.pro.then(()=>{elmOverlay.style.zIndex=0; document.body.style.overflow="auto"})
+          overlay.pro.then( () => { elmOverlay.style.zIndex=0; document.body.style.overflow="auto" } )
         })
-        // if ( Date.now() - time > 1000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
-        // else{
-        //   window.setTimeout( ()=>{
-        //     _this.done();
-        //     overlay.toggle();
-        //     window.setTimeout( ()=>{
-        //       elmOverlay.style.zIndex=0; document.body.style.overflow="auto"
-        //     }, 1000)
-        //   }, 1000 - ( Date.now() - time ))
-        // }
       })
     }
   })
