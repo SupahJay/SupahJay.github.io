@@ -117,7 +117,7 @@ class ShapeOverlays {
     this.render();
     if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
       requestAnimationFrame(() => {
-        this.renderLoop();
+        this.renderLoop(x);
       });
     }
     else {
