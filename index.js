@@ -127,28 +127,28 @@ class ShapeOverlays {
 var elmOverlay = document.querySelector('.shadow');
 var overlay = new ShapeOverlays(elmOverlay);
 
-// Barba.Pjax.getTransition = function () {
-//     return Barba.BaseTransition.extend({
-//         start: function () {
-//             //pre load shit here
-//             overlay.toggle();
-//             //after load shit here
-//             this.newContainerLoading.then( () => {
-//                     overlay.toggle();
-//                 }
-//             )
-//         }
+Barba.Pjax.getTransition = function () {
+    return Barba.BaseTransition.extend({
+        start: function () {
+            //pre load shit here
+            overlay.toggle();
+            //after load shit here
+            this.newContainerLoading.then( () => {
+                    overlay.toggle();
+                }
+            )
+        }
 
-//         // aniIn: function(){
+        // aniIn: function(){
 
-//         // },
+        // },
 
-//         // aniOut: function(){
+        // aniOut: function(){
 
-//         // }
+        // }
 
-//     })
-// }
+    })
+}
 // function uncoverPage(){
 //     this.newContainer.style.display = 'none';
 //     var _this = this;
