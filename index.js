@@ -136,7 +136,7 @@ Barba.Pjax.getTransition = function () {
       //after load shit here
       this.newContainerLoading.then( () => {
         _this.done();
-        if ( Date.now() - time > 5000 ) overlay.toggle()
+        if ( Date.now() - time > 5000 ) {overlay.toggle(); console.log("slow.",Date.now() - time, "difference")}
         else{ window.setTimeout( ()=>overlay.toggle(), Date.now() - time ) }
 
       })
