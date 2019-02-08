@@ -137,10 +137,10 @@ Barba.Pjax.getTransition = function () {
       var _this = this;
       //after load shit here
       this.newContainerLoading.then( () => {
-        _this.done();
         if ( Date.now() - time > 1000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
         else{
           window.setTimeout( ()=>{
+            _this.done();
             overlay.toggle();
             window.setTimeout( ()=>{
               elmOverlay.style.zIndex=0; document.body.style.overflow="auto"
