@@ -132,9 +132,11 @@ Barba.Pjax.getTransition = function () {
         start: function () {
             //pre load shit here
             overlay.toggle();
+            var _this= this;
             //after load shit here
             this.newContainerLoading.then( () => {
                     overlay.toggle();
+                    _this.done();
                 }
             )
         }
