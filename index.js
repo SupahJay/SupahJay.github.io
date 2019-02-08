@@ -136,8 +136,8 @@ Barba.Pjax.getTransition = function () {
       //after load shit here
       this.newContainerLoading.then( () => {
         _this.done();
-        if ( Date.now() - time > 5000 ) overlay.toggle();
-        else{ window.setTimeout( overlay.toggle(), Date.now() - time ) }
+        if ( Date.now() - time > 5000 ) overlay.toggle()
+        else{ window.setTimeout( ()=>overlay.toggle(), Date.now() - time ) }
 
       })
     }
