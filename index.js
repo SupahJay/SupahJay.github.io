@@ -71,7 +71,9 @@ class ShapeOverlays {
         this.open(x)
       })
     } else {
-      this.close();
+      this.pro = new Promise((x,y)=>{
+        this.close(x);
+      })
     }
   }
   open(x) {
@@ -80,11 +82,11 @@ class ShapeOverlays {
     this.timeStart = Date.now();
     this.renderLoop(x);
   }
-  close() {
+  close(x) {
     this.isOpened = false;
     this.elm.classList.remove('is-opened');
     this.timeStart = Date.now();
-    this.renderLoop();
+    this.renderLoop(x);
   }
   updatePath(time) {
     const points = [];
@@ -140,7 +142,9 @@ Barba.Pjax.getTransition = function () {
       var _this = this;
       //after load shit here
       this.newContainerLoading.then( () => {
-        overlay.pro.then((x,y)=>{overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto"})
+        overlay.pro.then((x,y)=>{ overlay.toggle();
+          overlay.pro.then(()=>{elmOverlay.style.zIndex=0; document.body.style.overflow="auto"})
+        })
         _this.done();
         // if ( Date.now() - time > 1000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
         // else{
