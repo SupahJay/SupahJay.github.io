@@ -51,7 +51,7 @@ class ShapeOverlays {
     this.elm = elm;
     this.path = elm.querySelectorAll('path');
     this.numPoints = 3;
-    this.duration = 600;
+    this.duration = 1000;
     this.delayPointsArray = [];
     this.delayPointsMax = 350;
     this.delayPerPath = 50;
@@ -144,7 +144,7 @@ Barba.Pjax.getTransition = function () {
             overlay.toggle();
             window.setTimeout( ()=>{
               elmOverlay.style.zIndex=0; document.body.style.overflow="auto"
-            }, 610)
+            }, 1000)
           }, 1000 - ( Date.now() - time ))
         }
       })
