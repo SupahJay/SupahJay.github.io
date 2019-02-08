@@ -18,8 +18,8 @@ a{text-decoration: none;color:#333}
 
 
 
-.elm{z-index: 110}
-#barba-wrapper{z-index:100}
+.is-opened{z-index: 110}
+#barba-wrapper{z-index:100;position:fixed}
 
 
 
