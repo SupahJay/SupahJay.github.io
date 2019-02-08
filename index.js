@@ -67,16 +67,18 @@ class ShapeOverlays {
       this.delayPointsArray[i] = (Math.sin(-radian) + Math.sin(-radian * range) + 2) / 4 * this.delayPointsMax;
     }
     if (this.isOpened === false) {
-      this.open();
+      this.pro = new Promise((x,y)=>{
+        this.open(x)
+      })
     } else {
       this.close();
     }
   }
-  open() {
+  open(x) {
     this.isOpened = true;
     this.elm.classList.add('is-opened');
     this.timeStart = Date.now();
-    this.renderLoop();
+    this.renderLoop(x);
   }
   close() {
     this.isOpened = false;
@@ -111,7 +113,7 @@ class ShapeOverlays {
       }
     }
   }
-  renderLoop() {
+  renderLoop(x) {
     this.render();
     if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
       requestAnimationFrame(() => {
@@ -120,6 +122,7 @@ class ShapeOverlays {
     }
     else {
       this.isAnimating = false;
+      return x()
     }
   }
 }
@@ -137,16 +140,18 @@ Barba.Pjax.getTransition = function () {
       var _this = this;
       //after load shit here
       this.newContainerLoading.then( () => {
-        if ( Date.now() - time > 1000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
-        else{
-          window.setTimeout( ()=>{
-            _this.done();
-            overlay.toggle();
-            window.setTimeout( ()=>{
-              elmOverlay.style.zIndex=0; document.body.style.overflow="auto"
-            }, 1000)
-          }, 1000 - ( Date.now() - time ))
-        }
+        overlay.pro.then((x,y)=>{overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto"})
+        _this.done();
+        // if ( Date.now() - time > 1000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
+        // else{
+        //   window.setTimeout( ()=>{
+        //     _this.done();
+        //     overlay.toggle();
+        //     window.setTimeout( ()=>{
+        //       elmOverlay.style.zIndex=0; document.body.style.overflow="auto"
+        //     }, 1000)
+        //   }, 1000 - ( Date.now() - time ))
+        // }
       })
     }
   })
