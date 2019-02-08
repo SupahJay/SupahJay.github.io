@@ -126,36 +126,20 @@ class ShapeOverlays {
 
 var elmOverlay = document.querySelector('.shadow');
 var overlay = new ShapeOverlays(elmOverlay);
-
 Barba.Pjax.getTransition = function () {
-    return Barba.BaseTransition.extend({
-        start: function () {
-            //pre load shit here
-            overlay.toggle();
-            var _this= this;
-            //after load shit here
-            this.newContainerLoading.then( () => {
-                    overlay.toggle();
-                    _this.done();
-                }
-            )
-        }
+  return Barba.BaseTransition.extend({
+    start: function () {
+        //pre load shit here
+      overlay.toggle();
+      var time =  Date.now()
+      var _this= this;
+      //after load shit here
+      this.newContainerLoading.then( () => {
+        _this.done();
+        if ( Date.now() - time > 5000 ) overlay.toggle();
+        else{ window.setTimeout( overlay.toggle(), Date.now() - time ) }
 
-        // aniIn: function(){
-
-        // },
-
-        // aniOut: function(){
-
-        // }
-
-    })
+      })
+    }
+  })
 }
-// function uncoverPage(){
-//     this.newContainer.style.display = 'none';
-//     var _this = this;
-//     this.newContainerLoading().then(() => {
-//         this.newContainer.style.visibility = 'visible';
-//         _this.done();
-//     });
-// }
