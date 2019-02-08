@@ -131,14 +131,15 @@ Barba.Pjax.getTransition = function () {
     start: function () {
       //pre load shit here .is-opened{z-index: 110}
       elmOverlay.style.zIndex=110
+      document.body.style.overflow="hidden"
       overlay.toggle();
       var time =  Date.now()
       var _this = this;
       //after load shit here
       this.newContainerLoading.then( () => {
         _this.done();
-        if ( Date.now() - time > 5000 ) { overlay.toggle(); elmOverlay.style.zIndex=0 }
-        else{ window.setTimeout( ()=>{ overlay.toggle(); elmOverlay.style.zIndex=0 } )}
+        if ( Date.now() - time > 5000 ) { overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" }
+        else{ window.setTimeout( ()=>{ overlay.toggle(); elmOverlay.style.zIndex=0; document.body.style.overflow="auto" } )}
       })
     }
   })
