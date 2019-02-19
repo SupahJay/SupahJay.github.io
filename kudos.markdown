@@ -1,7 +1,6 @@
 ---
 title: Just testing this feature on siteleaf
 date: 2019-02-19 21:05:00 Z
-Layout: showcase
 layout: showcase
 ---
 
